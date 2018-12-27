@@ -5,3 +5,8 @@ Cannot start session when headers already sent
 其他方法暂时不了解，先直接 @ 掉
 https://stackoverflow.com/questions/49024013/php-warning-session-start-cannot-start-session-when-headers-already-sent
 
+
+
+
+
+ceil 函数的返回值是 float 类型，在做严格比较的时候要小心！
