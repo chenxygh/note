@@ -2,8 +2,6 @@
 
 * [Introduction](README.md)
 * [js 相关](javascript/README.md)
-    * [kenel中路径的获取](javascript/getpath.md)
-    * [根据不同的内核版本进行条件编译](javascript/ifdefkernelversion.md)
+    * [伪数组转化为真数组](javascript/伪数组转化为真数组.md)
 * [php 相关](php/README.md)
-    * [kenel中路径的获取](php/getpath.md)
-    * [根据不同的内核版本进行条件编译](php/ifdefkernelversion.md)
+    * [@忽略警告和ceil返回 float 类型](php/ceil_@.md)
