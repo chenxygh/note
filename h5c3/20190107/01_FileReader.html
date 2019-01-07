@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	label {
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	label:hover > .mask {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		text-decoration: none;
+		background-color: rgba(0, 0, 0, .3);
+	}
+
+	input[type='file'] {
+		display: none;
+	}
+
+	input[type='file'] + img {
+		height: 100%;
+	}
+</style>
+</head>
+<body>
+	<form>
+		<label>
+			<input id="avatar" type="file">
+			<img src="2.jpg">
+			<i class="mask"></i>
+		</label>
+	</form>
+	<script>
+		/**
+		 * FileReader
+		 * 1. readAsText()  文本字符串
+		 * 2. readAsBinaryString()  二进制字符串，一般用于与服务端的文件传输
+		 * 3. readAsDataURL()  base64 格式的字符串，data 开头, 可以优化网页加载速度,
+		 * 将图片等文件转化为 DataURL 的编码，比如 img ，放入 src 中，不再向服务器请求图片，而是直接加载
+		 * 4. abort()  中断文件读取
+		 */
+		
+		/**
+		 * 即时预览的非 ajax 实现(本地直接加载，无须请求服务器)
+		 */
+		window.onload = function () {
+			var avatar = document.querySelector('#avatar');
+			avatar.addEventListener('change', function () {
+				var files = this.files;// 文件相关, 是 type="file" 的表单元素的一个属性, 是伪数组 ---> object
+				// console.log(typeof files);// object
+
+				if (!files.length) return;// 如果没有文件选择，那么不处理
+
+				var file = files[0];// 单一文件上传，接收该文件
+
+				/* ========== TODO: 校验文件的类型和大小 ========== */
+				// 暂不处理
+				
+
+				var fileReader = new FileReader();
+				/**
+				 * 注意，FileReader 对象也有readyState 属性，是只读的
+				 * 但是不同于 XMLHttpRequest 对象，有 onreadystatechange 事件
+				 * FileReader 没有 onreadystatechange 这个事件
+				 * | readyState | FileReader | XMLHttpRequest |
+				 * | :-: | :-: | :-: |
+				 * |   --    | EMPTY -- 0   | UNSENT -- 0 |
+				 * |   --    | LOADING -- 1 | OPENED -- 1 |
+				 * |   --    | DONE -- 2    | HEADER-RECEIVED -- 2 |
+				 * |   --    |     --       | LOADING -- 3 |
+				 * |   --    |     --       | DONE -- 4 |
+				 *
+				 * FileReader 常用事件: 
+				 * onabort  文件中断时触发
+				 * onerror  文件读取错误时触发
+				 * onload   文件成功读取时触发
+				 * onloadstart  文件读取开始时触发
+				 * onprogress  文件读取过程中一直触发
+				 * onloadend  文件读取结束(成功或者失败)时触发
+				 * 
+				 * 
+				 */
+				
+				// fileReader.onreadystatechange = function () {// 不会触发，没有该事件
+				// 	console.log(this.readyState);
+				// };
+
+				// fileReader.onabort = function () {// readyState  2
+				// 	console.log(this.readyState);
+				// }
+
+				// fileReader.onerror = function () {// readyState  具体哪个阶段错误
+				// 	console.log(this.readyState);
+				// }
+
+				// fileReader.onload = function () {// readyState  2
+				// 	console.log(this.readyState);
+				// }
+
+				// fileReader.onloadstart = function () {// readyState  1
+				// 	console.log(this.readyState);
+				// 	this.abort();
+				// }
+
+				// fileReader.onprogress = function () {// readyState  1
+				// 	console.log(this.readyState);
+				// }
+
+				// fileReader.onloadend = function () {// readyState  2
+				// 	console.log(this.readyState);
+				// }
+				
+				fileReader.onload = function () {
+					document.querySelector('#avatar + img').src = this.result;
+				}
+
+				fileReader.readAsDataURL(file);// blob  binary large object
+			}, false);
+		};
+	</script>
+</body>
+</html>

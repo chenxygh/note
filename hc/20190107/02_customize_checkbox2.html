@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	i {
+		text-decoration: none;
+	}
+
+	div {
+		position: relative;
+		width: 20px;
+		height: 20px;
+	}
+
+	input[type='checkbox'] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+	}
+
+	input[type='checkbox'] + i {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		background-color: #ccc;
+	}
+
+	input[type='checkbox']:checked + i {
+		background-color: pink;
+	}
+
+	input[type='checkbox']:checked + i::after {
+		content: " ";
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		margin: 5px;
+		border-radius: 50%;
+		background-color: #ccc;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<input type="checkbox">
+		<i></i>
+	</div>
+</body>
+</html>
