@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	div {
+		width: 200px;
+		height: 200px;
+		background-color: pink;
+	}
+
+	#dv2 {
+		background-color: skyblue;
+	}
+
+	ul {
+		width: 600px;
+		height: 300px;
+		font-size: 0;
+	}
+
+	li {
+		display: inline-block;
+		box-sizing: border-box;	 	
+		width: 300px;
+		height: 300px;
+		padding: 50px;
+		font-size: 30px;
+		background-color: purple;
+	}
+</style>
+</head>
+<body>
+	<ul>
+		<li><div id="dv1"></div></li>
+		<li><div id="dv2"></div></li>
+	</ul>
+	<script>
+		/**
+		 * dispatchEvent()，传入参数是
+		 * document.createEvent() 或者 new CustomEvent() 或者 new Event() 出来的自定义事件对象
+		 * 不会覆盖掉原来的内置的事件，即使自定义的事件 type 和内置的相同
+		 * 比如下面的 click 事件，
+		 * 如果是直接 dv1 的点击，那么 event 是 MouseEvet
+		 * 如果是来自 dv2 的点击，间接通过 trigger 触发 dv1 的 click，那么 event 是 CustomEvent
+		 * 是不同的 事件对象，不存在覆盖的情况
+		 */
+		window.onload = function () {
+			var trigger = function (type, element, detail) {
+				element.dispatchEvent(new CustomEvent(type, {detail: detail, bubbles: false, cancelable: true}));
+			}
+
+			dv1.addEventListener('click', function (event) {
+				console.log('dv1 is onclick');
+				console.log(event.detail);
+				console.log(event);
+			}, false);
+
+			dv2.addEventListener('click', function () {
+				console.log('dv2 is onclick');
+				trigger('click', dv1, {a: 111, b: 222});
+			}, false);
+		};
+	</script>
+</body>
+</html>
