@@ -31,6 +31,9 @@ element.dispatch(event); <br>
 event = new Event(typeArg, eventInit); <br>
 [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event/Event)
 
+## CustomEvent (更好地自定义事件，了解)
+[CustomEvent](https://developer.mozilla.org/zh-CN/docs/Web/API/CustomEvent)
+
 ---
 
 > `link`: 
