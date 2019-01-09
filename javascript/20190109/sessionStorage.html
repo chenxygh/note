@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn1">set</button>
+	<button id="btn2">get</button>
+	<button id="btn3">remove</button>
+	<button id="btn4">clear</button>
+	<script>
+		window.onload = function () {
+			/**
+			 * sesstionStorage: --> BOM Object
+			 * 1. 生存周期
+			 * 存储在页面，所以当页面关闭后，就销毁，没有 expires 的说法，就是个临时存储性质的东西
+			 * cookie 客户端设置的话，默认是浏览器关闭后销毁，而且可以设置 expires
+			 * cookie -- DOM Object document.cookie
+			 * 而且可以通过文件协议打开文件，进行调试
+			 * 2. 大小
+			 * 5M 左右
+			 * 3. 
+			 * window.sessionStorage.setItem(key, value)
+			 * window.sessionStorage.getItem(key)
+			 * window.sessionStorage.removeItem(key)
+			 * window.sessionStorage.clear()
+			 */
+			// endannotation
+			
+			btn1.addEventListener('click', function () {
+				var res = window.sessionStorage.setItem('name', 'cxy');
+				console.log(res);// undefined
+			}, false);
+
+			btn2.addEventListener('click', function () {
+				var res = window.sessionStorage.getItem('name');
+				console.log(res);// 没有 ---> null
+			}, false);
+
+			btn3.addEventListener('click', function () {
+				var res = window.sessionStorage.removeItem('name');// 没有，不会报错
+				console.log(res);// undefined
+			}, false);
+
+			btn4.addEventListener('click', function () {
+				var res = window.sessionStorage.clear();
+				console.log(res);// undefined
+			}, false);
+		};
+	</script>
+</body>
+</html>
