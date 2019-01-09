@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn1">set</button>
+	<button id="btn2">get</button>
+	<button id="btn3">remove</button>
+	<button id="btn4">clear</button>
+	<script>
+		window.onload = function () {
+			/**
+			 * localStorage: --> BOM Object
+			 * 1. 生存周期
+			 * 存储在硬盘, 不随浏览器或者而页面关闭而销毁，但是同样不能跨浏览器共享
+			 * 删除只能手动删除
+			 * 可以通过文件协议打开文件，进行调试
+			 * 2. 大小
+			 * 20M 左右
+			 * 3. 
+			 * window.localStorage.setItem(key, value)
+			 * window.localStorage.getItem(key)
+			 * window.localStorage.removeItem(key)
+			 * window.localStorage.clear()
+			 */
+			// endannotation
+			
+			btn1.addEventListener('click', function () {
+				var res = window.localStorage.setItem('name', 'cxy');
+				console.log(res);// undefined
+			}, false);
+
+			btn2.addEventListener('click', function () {
+				var res = window.localStorage.getItem('name');
+				console.log(res);// 没有 ---> null
+			}, false);
+
+			btn3.addEventListener('click', function () {
+				var res = window.localStorage.removeItem('name');// 没有，不会报错
+				console.log(res);// undefined
+			}, false);
+
+			btn4.addEventListener('click', function () {
+				var res = window.localStorage.clear();
+				console.log(res);// undefined
+			}, false);
+		};
+	</script>
+</body>
+</html>

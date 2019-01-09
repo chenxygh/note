@@ -8,6 +8,7 @@
     * [es6-函数形参默认值](javascript/es6-函数形参默认值.md)
     * [原生js操作cookie](javascript/原生js操作cookie.md)
     * [cookie的一些想法](javascript/cookie的一些想法.md)
+    * [cookie_sessionStorage_localStorage](javascript/cookie_sessionStorage_localStorage.md)
 * [php 相关](php/README.md)
     * [@忽略警告和ceil返回 float 类型](php/ceil_@.md)
 * [hc 相关](hc/README.md)
