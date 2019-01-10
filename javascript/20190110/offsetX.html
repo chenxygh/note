@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	#father {
+		width: 500px;
+		height: 70px;
+		border: 10px solid red;
+	}
+
+	#son {
+		width: 100px;
+		height: 50px;
+		border: 20px solid skyblue;
+		padding: 20px;
+		background: pink;
+	}
+	</style>
+</head>
+<body>
+	<div id="father">
+		<div id="son"></div>
+	</div>
+	<script>
+		window.onload = function () {
+			son.addEventListener('click', function (event) {
+				/**
+				 * offsetX 是鼠标点击位置相对于当前元素的内边框的距离
+				 */
+				// endannotation
+				console.log(event.offsetX);
+			} ,false);
+		};
+	</script>
+</body>
+</html>
