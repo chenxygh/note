@@ -9,6 +9,7 @@
     * [原生js操作cookie](javascript/原生js操作cookie.md)
     * [cookie的一些想法](javascript/cookie的一些想法.md)
     * [cookie_sessionStorage_localStorage](javascript/cookie_sessionStorage_localStorage.md)
+    * [定时器的清除](javascript/定时器的清除.md)
 * [php 相关](php/README.md)
     * [@忽略警告和ceil返回 float 类型](php/ceil_@.md)
 * [hc 相关](hc/README.md)
