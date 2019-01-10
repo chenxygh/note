@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [js 相关](javascript/README.md)
     * [伪数组转化为真数组](javascript/伪数组转化为真数组.md)
-    * [自定义事件](javascript/自定义事件.md)
+    * [自定义事件](javascript/自定义事件-undone.md)
     * [trigger的原生js实现(dispatchEvent的一点解惑)](javascript/trigger的原生js实现(dispatchEvent的一点解惑).md)
     * [es6-函数形参默认值](javascript/es6-函数形参默认值.md)
     * [原生js操作cookie](javascript/原生js操作cookie.md)
