@@ -1,5 +1,21 @@
 # es6_解构赋值_剩余参数_展开语法_箭头函数
 [解构赋值](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) <br>
+## 解构赋值
+可以将值从数组或属性从对象提取到不同的变量中 <br>
+用法: <br>
+
+```
+解构赋值 对于对象，必须变量名和属性名一致，或者是 剩余语法 解决
+(({id, ...args} = {id: 1, name: 'cxy', fuck: 'all'}) => {console.log(args);})()
+VM127:1 {name: "cxy", fuck: "all"}
+
+解构赋值，对于数组，就常理来
+[a, b = 4] = [1]
+[1]
+console.log(a) --> 1
+console.log(b) --> 4
+```
+
 [剩余参数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters) <br>
 [展开语法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax) <br>
 [箭头函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) <br>
