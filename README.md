@@ -11,6 +11,7 @@
     * [cookie_sessionStorage_localStorage](javascript/cookie_sessionStorage_localStorage.md)
     * [定时器的清除](javascript/定时器的清除.md)
     * [offsetX和offsetLeft](javascript/offsetX和offsetLeft.md)
+    * [es6-let_const](javascript/es6-let_const.md)
 * [php 相关](php/README.md)
     * [@忽略警告和ceil返回 float 类型](php/ceil_@.md)
 * [hc 相关](hc/README.md)
