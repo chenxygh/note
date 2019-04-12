@@ -27,3 +27,7 @@
 * [codewars 相关](codewars/README.md)
 	* [codewars-js 相关](codewars/js/README.md)
     	* [判断浮点数](codewars/js/判断浮点数.md)
+* [c 相关](c/README.md)
+    * [scanf_gets_getchar](c/scanf_gets_getchar.md)
+    * [scanf扫描集](c/scanf扫描集.md)
+    * [负数的左移和右移](c/负数的左移和右移.md)
