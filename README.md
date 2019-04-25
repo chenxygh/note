@@ -32,4 +32,4 @@
     * [scanf_gets_getchar](c/scanf_gets_getchar.md)
     * [scanf扫描集](c/scanf扫描集.md)
     * [负数的左移和右移](c/负数的左移和右移.md)
-    * [C 语言结构体的初始化](c/C 语言结构体的初始化.md)
+    * [C-语言结构体的初始化](c/C-语言结构体的初始化.md)
