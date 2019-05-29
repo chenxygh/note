@@ -15,6 +15,7 @@
     * [es6_解构赋值_剩余参数_展开语法_箭头函数](javascript/es6_解构赋值_剩余参数_展开语法_箭头函数.md)
     * [numObj.toString([radix])](javascript/numObj.toString([radix]).md)
     * [jQuery_实现任意位置的锚点定位](javascript/jQuery_实现任意位置的锚点定位.md)
+    * [video-在移动端的踩坑之旅](javascript/video-在移动端的踩坑之旅.md)
 * [php 相关](php/README.md)
     * [@忽略警告和ceil返回 float 类型](php/ceil_@.md)
 * [hc 相关](hc/README.md)
