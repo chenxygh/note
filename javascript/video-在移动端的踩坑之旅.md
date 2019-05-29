@@ -185,5 +185,4 @@ Android还有很多问题，特别是微信浏览器 (我称之为 手机版 IE)
 
 
 
-[GoodsDetails.cshtml](20190529/GoodsDetails.cshtml)
-[goodsdetails.js](20190529/goodsdetails.js)
+ ... 不想惹事，还是把公司项目代码源文件去掉了，就这样
